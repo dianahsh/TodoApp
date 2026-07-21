@@ -8,3 +8,13 @@ Accept: application/json
 POST {{Todo_HostAddress}}/Todo
 Content-Type: application/json
 Accept: application/json
+
+###
+
+POST {{Todo_HostAddress}}/register
+Content-Type: application/json
+
+{
+  "email": "",
+  "password": ""
+}
