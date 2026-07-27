@@ -1,20 +1,38 @@
 @Todo_HostAddress = http://localhost:5099
 
+###
+
 GET {{Todo_HostAddress}}/Todo/all
 Accept: application/json
 
 ###
 
 POST {{Todo_HostAddress}}/Todo
+Authorization: Bearer CfDJ8LYJ_r4KVJZCq5BQi_n47lqn_ji4wlToUhZp7H0bl7NpprQwpcUhZfmLscolAtQStnh3zVDOysEaD1tML6YUSZZXP-0SI7nJHRp2mwaldD7_zntfZ3FURuaiO9QaYV1QPhYgHX6JHi1OxRvM8_AprL7FuEOVoWQkUbyDhHkbf9opoGACIIW0ocOCo-OM9flSRU9967ZNo0MSiFNU2QdrbwftARQC8ataKN1VpmCOndYSXVskRP2DJexXTA1-SBRqSKM3wevcDrjSFt-Go35zD-6E_S567C7GOz-pkSf03ybKVZcfVGciz53mVSNlp0CFCj2PbP3cr2F3VDDFU0YXc7_2lSu7DJQrQpPMtZsZmpRo1VTNDbAqLBFRGESyt_gZAhazvLRa4GfkFbR52_R2Q6C6EVbV6s-5BARbZcJyuqIBG82mn8mhtctg864pGn7r-qqQ8Z6snzWp_M99dOTfhDXga0aEQYLCrwCO_L6udgPCHrabzCcCA4WfIYetAQzAB_e3-daWAWL6Deqx6SK9fp_O4_f-OVPfPVW_w70JZpuryKyaxHRN8XWKSmnyymm6n8t6lwZb8xP_bta8E2NYHtx8oCmCpqvJK2nm-bSR7pEFR5GI7nfjBi5BkIJBB3slIIQb0dRWmuiydzQLnfDoWwNSpZOLZ1TZMGFPNhZYYSJML8pYI4W1KfWhIvDg8MhR2A
 Content-Type: application/json
-Accept: application/json
+
+{
+  "Title": "Homework",
+  "Description": "Easy"
+}
 
 ###
 
 POST {{Todo_HostAddress}}/register
 Content-Type: application/json
+Accept: application/json
 
 {
-  "email": "",
-  "password": ""
+  "email": "q@gmail.com",
+  "password": "asdF12#"
+}
+
+###
+
+POST {{Todo_HostAddress}}/login
+content-Type: application/json
+
+{
+  "email": "q@gmail.com",
+  "password": "asdF12#"
 }

@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using System.Security.Claims;
 using Todo.Models;
+using System;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Todo.Controllers
 {
@@ -14,6 +18,7 @@ namespace Todo.Controllers
         public TodoController(TodoContext context)
         {
             _context = context;
+            //_Usercontext = Usercontext;
         }
 
         [HttpGet("all")]
@@ -42,14 +47,18 @@ namespace Todo.Controllers
                 return BadRequest();
             }
         }
+
+        [Authorize]
         [HttpPost]
         public async Task<ActionResult> PostItem(Todos item)
         {
+            
             try
             {
+                var a = User.FindFirstValue(ClaimTypes.NameIdentifier);
                 var t = new Todos { Title = item.Title,
                     Description = item.Description, CreatedDate = item.CreatedDate,
-                    FinishDate = item.FinishDate
+                    FinishDate = item.FinishDate, UserId = a
                 };
                 _context.Todos.Add(t);
                 await _context.SaveChangesAsync();
