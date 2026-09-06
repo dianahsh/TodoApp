@@ -8,7 +8,7 @@ Accept: application/json
 ###
 
 POST {{Todo_HostAddress}}/Todo
-Authorization: Bearer CfDJ8LYJ_r4KVJZCq5BQi_n47lraw8Zz6Z4uhXfloRG0jQ0gLidKtvSt_mhnYnZF3oCmENlZ5LXSnVYvRDyNn2O5SqQITCylqI3tsftlquFR_TO6jpukPp4_CcZJmaAE_mwFxXz-Pq7tHrUqwlG7e2MClCmChu_kqHeX0B5N8SyMTaWl4TiCTNx0wanAe3YK5PY1r7BkC2UnyT6CZGWhdNyaOPx4ScU_GoOaRugLr9l7h8msuCiqQkxGdhlItol7waqsx5Mr0_9E8H5yTlSahULwwSnM1UeWeDd9jeYhgpG4uqjXemvyu1Z1y5mCiCGbwDI6mhvwTdobWHeV7YslHREWdgkJtb-mcLyA4GEhvy-VQB9LAEKu9YoyP8NEnI4X2IdGJHzd8D9LkOZViu7rexHMDI2cx1dTkjh9L_sDh1-YtXg_ZY5GFgDqQETuRLj5OKzj2k1nQAXsBy7qup2scmEjJ7CQ3SLeuPJFaB0OTlbrwzKPtHkR1z4Fy5Lg6t_M4Hsr6aAYZJ3XmqxDhgeYKoZ2JtEvpxJ9roIWgDC3NN3rDCdyPidLP7foGS_dxRlvcPWbjQTpDmvgr64XLfZFRsTCyzIAq2m1_4bizIasoN7AB6Dh6AwwCc9OdJ4LF4oNmJthzI6JeSCPe-zL0zFNeirZKTvV_Ma8-oYp_JyS2tpXHjm4L3pU1DqJcuKRA8BQsemG1g
+Authorization: Bearer 
 Content-Type: application/json
 
 {
@@ -22,7 +22,7 @@ Put {{Todo_HostAddress}}/Todo/5
 Content-Type: application/json
 {
    "Title": "paint",
-   "Description": "Hard"
+   "Description": ""
 }
 ###
 
@@ -37,7 +37,7 @@ Accept: application/json
 
 {
   "email": "w@gmail.com",
-  "password": "123Asd!"
+  "password": "*****"
 }
 
 ###
@@ -47,5 +47,5 @@ content-Type: application/json
 
 {
   "email": "w@gmail.com",
-  "password": "123Asd!"
+  "password": "******"
 }
